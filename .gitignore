@@ -1,0 +1,7 @@
+openbao/data/
+.env
+*.env
+*.token
+*.key
+unseal-keys.txt
+root-token.txt

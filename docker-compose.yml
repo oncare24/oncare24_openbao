@@ -1,0 +1,11 @@
+services:
+  openbao:
+    image: openbao/openbao:2.5.3
+    container_name: oncare-openbao
+    ports:
+      - "8200:8200"
+      - "8201:8201"
+    volumes:
+      - ./openbao/config:/openbao/config
+      - ./openbao/data:/openbao/data
+    command: server -config=/openbao/config/openbao.hcl
