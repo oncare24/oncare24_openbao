@@ -192,3 +192,31 @@ Initialized    true
 Sealed         false
 ```
 ---
+
+## License Notice / 라이선스 안내
+
+### English
+
+This repository does not contain or modify the OpenBao source code.  
+It only provides Docker Compose and configuration files to run OpenBao for the OnCare24 project.
+
+OpenBao is licensed under the Mozilla Public License 2.0 (MPL-2.0).
+
+- OpenBao official site: https://openbao.org/
+- OpenBao GitHub: https://github.com/openbao/openbao
+- OpenBao license: MPL-2.0
+
+The OnCare24 project uses OpenBao as a separate KMS server for storing and managing encryption-related key materials.
+
+### 한국어
+
+이 저장소는 OpenBao의 소스 코드를 포함하거나 수정하지 않습니다.  
+OnCare24 프로젝트에서 OpenBao를 Docker로 실행하기 위한 Docker Compose 및 설정 파일만 제공합니다.
+
+OpenBao는 Mozilla Public License 2.0(MPL-2.0) 라이선스를 따릅니다.
+
+- OpenBao 공식 사이트: https://openbao.org/
+- OpenBao GitHub: https://github.com/openbao/openbao
+- OpenBao 라이선스: MPL-2.0
+
+OnCare24 프로젝트는 OpenBao를 별도 KMS 서버로 사용하며, 암호화 관련 키 정보를 저장하고 관리하기 위해 OpenBao API를 호출합니다.
