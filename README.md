@@ -1,6 +1,7 @@
 # oncare24_openbao
 
 OpenBao Docker 실행 설정입니다.
+이 설정은 개발 및 팀 테스트용 설정입니다.
 
 ---
 
