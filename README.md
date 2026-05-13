@@ -162,6 +162,46 @@ $env:BAO_ADDR="http://localhost:8200"
 $env:BAO_TOKEN="초기화때_나온_Root_Token"
 $env:BAO_KV_MOUNT="secret"
 ```
+---
+
+## 9-1. 같은 와이파이에서 다른 PC가 OpenBao 서버에 접속하는 방법
+
+현재 README의 `localhost` 접속 방식은 OpenBao를 실행하는 PC 내부에서만 사용하는 로컬 테스트 방식입니다.
+
+실제 팀 테스트에서는 OpenBao를 실행하는 PC를 KMS 서버처럼 사용하고, 백엔드가 실행되는 다른 PC에서 같은 와이파이를 통해 OpenBao 서버에 접속합니다.
+
+예시 구조:
+
+```text
+[OpenBao 서버 PC]
+- Docker로 OpenBao 실행
+- IP 예시: 192.168.0.15
+- OpenBao 포트: 8200
+
+[백엔드 실행 PC]
+- Spring Boot 백엔드 실행
+- BAO_ADDR=http://192.168.0.15:8200 으로 접속
+```
+
+OpenBao 설정 파일 확인(openbao/config/openbao.hcl):
+```text
+ui = true
+
+api_addr = "http://192.168.0.15:8200"
+
+listener "tcp" {
+  address     = "0.0.0.0:8200"
+  tls_disable = true
+}
+```
+
+백엔드 PC 환경변수 설정:
+
+```text
+$env:BAO_ADDR="http://192.168.0.15:8200"
+$env:BAO_TOKEN="초기화때_나온_Root_Token"
+$env:BAO_KV_MOUNT="secret"
+```
 
 ---
 
