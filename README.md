@@ -1,7 +1,7 @@
 # oncare24_openbao
 
-OpenBao Docker 실행 설정입니다.
-이 설정은 개발 및 팀 테스트용 설정입니다.
+OpenBao Docker 실행 설정이다.
+이 설정은 개발 및 팀 테스트용 설정이다.
 
 ---
 
@@ -65,7 +65,7 @@ Unseal Key 5: ...
 Initial Root Token: ...
 ```
 
-> Unseal Key와 Root Token은 따로 보관하고 GitHub에 올리지 않습니다.
+> Unseal Key와 Root Token은 따로 보관하고 GitHub에 올리지 않는다.
 
 ---
 
@@ -77,7 +77,7 @@ bao operator unseal
 bao operator unseal
 ```
 
-각 명령어 실행 시 `Unseal Key`를 하나씩 입력합니다.
+각 명령어 실행 시 `Unseal Key`를 하나씩 입력한다.
 
 상태 확인:
 
@@ -114,7 +114,7 @@ export BAO_TOKEN=xxx.xxxxxxxx
 bao secrets enable -path=secret kv-v2
 ```
 
-이미 활성화되어 있으면 그대로 사용하면 됩니다.
+이미 활성화되어 있으면 그대로 사용하면 된다.
 
 ---
 
@@ -167,9 +167,9 @@ $env:BAO_KV_MOUNT="secret"
 
 ## 9-1. 같은 와이파이에서 다른 PC가 OpenBao 서버에 접속하는 방법
 
-현재 README의 `localhost` 접속 방식은 OpenBao를 실행하는 PC 내부에서만 사용하는 로컬 테스트 방식입니다.
+현재 README의 `localhost` 접속 방식은 OpenBao를 실행하는 PC 내부에서만 사용하는 로컬 테스트 방식이다.
 
-실제 팀 테스트에서는 OpenBao를 실행하는 PC를 KMS 서버처럼 사용하고, 백엔드가 실행되는 다른 PC에서 같은 와이파이를 통해 OpenBao 서버에 접속합니다.
+실제 팀 테스트에서는 OpenBao를 실행하는 PC를 KMS 서버처럼 사용하고, 백엔드가 실행되는 다른 PC에서 같은 와이파이를 통해 OpenBao 서버에 접속한다.
 
 예시 구조:
 
