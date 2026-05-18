@@ -159,6 +159,8 @@ http://localhost:8200
 백엔드를 로컬 Windows에서 실행하는 경우:
 
 ```powershell
+$env:ONCARE_SECURITY_CRYPTO_ENABLED="true"
+$env:CRYPTO_FFI_LIBRARY="D:\Cap2-BoSalPim\oncare24_backEnd\native\crypto_ffi.dll"
 $env:BAO_ADDR="http://localhost:8200"
 $env:BAO_TOKEN="초기화때_나온_Root_Token"
 $env:BAO_KV_MOUNT="secret"
