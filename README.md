@@ -201,6 +201,8 @@ listener "tcp" {
 백엔드 PC 환경변수 설정:
 
 ```text
+$env:ONCARE_SECURITY_CRYPTO_ENABLED="true"
+$env:CRYPTO_FFI_LIBRARY="D:\Cap2-BoSalPim\oncare24_backEnd\native\crypto_ffi.dll"
 $env:BAO_ADDR="http://192.168.0.15:8200"
 $env:BAO_TOKEN="초기화때_나온_Root_Token"
 $env:BAO_KV_MOUNT="secret"
